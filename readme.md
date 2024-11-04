@@ -28,8 +28,8 @@ If you need to install Python, download it from the official Python website.
 ### Installation
  - Clone the project repository to your local machine:
  ```
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/aandhteam/python-inventory.git
+cd python-inventory
 ```
 
 ### Create a Virtual Environment
@@ -78,7 +78,7 @@ python manage.py test
 ```
 
 ### URLS
-  - Admin: http://lcoalhost:8000/admin
+  - Admin: http://localhost:8000/admin
     - Username: admin
     - Password: admin
-  - Front-End: http://lcoalhost:8000
+  - Front-End: http://localhost:8000
