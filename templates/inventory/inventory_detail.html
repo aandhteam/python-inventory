@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Inventory Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6 pt-5">
+            <h5>Inventory Management System</h5>
+        </div>
+        <div class="col-6 pt-5 text-end mb-3">
+            <a href="{% url 'inventory_list' %}" class="btn btn-sm btn-primary">Back to Listing</a>
+
+        </div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-9" style="align-content: center">
+            <h4>{{ item.name }}</h4>
+        </div>
+        <div class="col-3 pb-3 mb-3 text-end">
+            <img src="{% static 'img/placeholder.jpg' %}" class="img-fluid img-thumbnail" style="width: 50%">
+        </div>
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <tr>
+                        <th>Description</th>
+                        <td>{{ item.description }}</td>
+                    </tr>
+                    <tr>
+                        <th>Stock</th>
+                        <td>{{ item.stock }}</td>
+                    </tr>
+                    <tr>
+                        <th>Availability</th>
+                        <td>{{ item.availability }}</td>
+                    </tr>
+                    <tr>
+                        <th>Supplier Name</th>
+                        <td>{{ item.supplier.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Notes</th>
+                        <td>{{ item.note }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
